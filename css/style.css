@@ -1,0 +1,192 @@
+@font-face {
+    font-family: 'Mulish';
+    src: url(../Fonts/Mulish-Regular.ttf);
+}
+@font-face {
+    font-family: 'Abdoullah Ashgar EL-kharef';
+    src: url(../Fonts/AbdoullahAshgarEL-kharefRegular.ttf);
+}
+:root{
+    --succes-color: #2ecc71;
+    --error-color: #e74c3c;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+ /* Page 1 */
+.welcome-page{
+    min-height: 100vh;
+    height: 100%;
+    background: url(../images/background-desktop.png), #FFFFFF;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 140px 0px;
+}
+.welcome-page-box{
+    background: rgba(245, 247, 255, 0.85);
+    width: 1080px;
+    height: 100%;
+    padding: 60px;
+    margin: auto;
+    border-radius: 10px;
+
+}
+.welcome-page-box .welcome-page-image img{
+    width: 450px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.welcome-page-text{
+    width: 100%;
+    padding: 0px 0px 0px 60px;
+}
+.welcome-page-text h1{
+    font-family: 'Abdoullah Ashgar EL-kharef';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 120%;
+    padding-bottom: 10px;
+}
+.welcome-page-text p{
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 160%;
+    padding-bottom: 20px;
+}
+.welcome-page-text button{
+    font-family: 'Mulish';
+    cursor: pointer;
+    padding: 0px 50px;
+    width: 100%;
+    height: 60px;
+    border: none !important;
+    color: #fff;
+    line-height: 140%;
+    background: linear-gradient(113.87deg, #2663DF 14.81%, #758FF0 88.76%);
+    box-shadow: 0px 6px 18px #9CADF2;
+    border-radius: 10px;
+}
+
+@media (max-width:1000px) {
+    .welcome-page{
+        background: url(../images/background-mobile.png), #FFFFFF;
+        padding: 40px 30px;
+    }
+    .welcome-page-box{
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background: none;
+        padding: 0px;
+    }
+    .welcome-page-text{
+        padding:40px 0px 40px 0px;
+        text-align: center;
+    }
+    .welcome-page-box .welcome-page-image img {
+        width: 100%;
+        height: 415px;
+    }
+    .welcome-page-text h1 {
+        font-size: 42px;
+    }
+    .welcome-page-text p{
+        font-size: 16px;
+    }
+}
+@media (max-width:500px){
+    .welcome-page-box .welcome-page-image img {
+        width: 100%;
+        height: 315px;
+    }
+}
+
+ /* Page 2 */
+.welcome-page-box form .form-group{
+    padding: 8px 20px;
+    height: 60px;
+    background-color: #fff;
+    border: 1px solid #DBE3FF;
+    border-radius: 10px;
+}
+.welcome-page-box form .form-group input{
+  border: none;
+  width: 80% !important;
+}
+.welcome-page-box form .form-group img{
+   border-right: 1px solid #9CADF2; 
+   height: 20px;
+   padding-right: 6px;
+   margin-right: 12px;
+   float: left;
+   margin-top: 10px;
+}
+.signup .welcome-page-text {
+    padding: 0px 0px 0px 60px;
+}
+.signup .welcome-page-text h1{
+    font-size: 42px;
+}
+@media (max-width:1000px) {
+    .signup .welcome-page-text {
+        padding: 40px 0px 0px 0px;
+    }
+}
+
+/* Page 3 */
+.welcome-page-text .text-email{
+
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    text-decoration-line: underline;
+    color: #1F1249;
+}
+
+@media (max-width:1000px) {
+    .welcome-page-image{
+        width: 100%;
+    }
+    .welcome-page-box .welcome-page-image img{
+        height: 415px;
+    }
+    .succefully .welcome-page-text {
+        padding-top: 140px;
+    }
+    .succefully .welcome-page-text h1 {
+        font-size: 32px;
+    }
+}
+
+
+/* Validation CSS */
+.form-group small{
+    color:#e74c3c;
+    position: relative;
+    visibility: hidden;
+}
+
+.form-group.error small{
+    visibility: visible;
+}
+.form-group.success input {
+    border-color:#2ecc71;
+}
+
+.form-group.error input {
+    border-color:#e74c3c; 
+}
+.form-group.error {
+    height: 100% !important;
+}
